@@ -9,8 +9,8 @@ import (
 )
 
 const (
-	DefaultPort                  = "5055"
-	HerokuServiceShutdownTimeout = 20 * time.Second
+	DefaultPort     = "5055"
+	ShutdownTimeout = 20 * time.Second
 )
 
 type Config struct {

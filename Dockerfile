@@ -10,11 +10,7 @@ COPY ./pkg pkg
 
 RUN go build ./cmd/...
 
-COPY ./Procfile .
-
 ENV SECTOR_ID=1 \
 PORT=5055
-
-WORKDIR /app
 
 CMD [ "/app/service" ]

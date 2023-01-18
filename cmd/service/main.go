@@ -51,16 +51,11 @@ func main() {
 	}
 }
 
-// AwaitSignals awaits signals that Heroku typically sends to restart or stop a
-// dyno instance.
-//
-// See https://devcenter.heroku.com/articles/dynos#graceful-shutdown-with-sigterm
 func AwaitSignals() os.Signal {
 	ch := make(chan os.Signal, 2)
 	return awaitSignals(ch)
 }
 
-// For testing purposes.
 func awaitSignals(ch chan (os.Signal)) os.Signal {
 	signal.Notify(ch, syscall.SIGTERM, os.Interrupt)
 	return <-ch

@@ -21,7 +21,7 @@ The service helps drones to locate the nearest databank via a JSON API inorder t
 ## Running service in Docker
 
 * `make image` to build an image
-* docker run -p 5058:5055 --env PORT=5055 navigationsvc
+* docker run -p 5055:5057 --env PORT=5057 --env SECTOR_ID=2 navigationsvc (overwrite the port and sector id incase needed)
 
 ## Example
 

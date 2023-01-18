@@ -56,7 +56,7 @@ func (s *Server) Start() error {
 
 // Stop stops the service.
 func (s *Server) Stop() error {
-	ctx, cancel := context.WithTimeout(context.Background(), config.HerokuServiceShutdownTimeout)
+	ctx, cancel := context.WithTimeout(context.Background(), config.ShutdownTimeout)
 	defer cancel()
 
 	return s.httpServer.Shutdown(ctx)
