@@ -1,4 +1,4 @@
-module github.com/betalo-sweden/navigationsvc
+module github.com/akhilachatlapalle/navigationsvc
 
 go 1.19
 
@@ -10,7 +10,6 @@ require (
 )
 
 require (
-	github.com/heroku/x v0.0.28 // indirect
 	github.com/kr/text v0.2.0 // indirect
 	github.com/pkg/errors v0.9.1 // indirect
 	github.com/pmezard/go-difflib v1.0.0 // indirect

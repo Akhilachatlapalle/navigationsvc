@@ -6,15 +6,14 @@ import (
 	"net/http"
 	"time"
 
-	"github.com/betalo-sweden/navigationsvc/internal/navigationsvc/domain"
-	"github.com/betalo-sweden/navigationsvc/internal/navigationsvc/transport"
-
 	// third-party
 	"github.com/go-chi/chi"
 	"go.uber.org/zap"
 
 	// local
-	"github.com/betalo-sweden/navigationsvc/internal/config"
+	"github.com/akhilachatlapalle/navigationsvc/internal/config"
+	"github.com/akhilachatlapalle/navigationsvc/internal/navigationsvc/domain"
+	"github.com/akhilachatlapalle/navigationsvc/internal/navigationsvc/transport"
 )
 
 type Server struct {

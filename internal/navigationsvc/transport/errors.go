@@ -4,7 +4,7 @@ import (
 	"errors"
 	"net/http"
 
-	"github.com/betalo-sweden/navigationsvc/pkg/rest"
+	"github.com/akhilachatlapalle/navigationsvc/pkg/rest"
 
 	"github.com/davecgh/go-spew/spew"
 

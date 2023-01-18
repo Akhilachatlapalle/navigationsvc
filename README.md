@@ -4,6 +4,11 @@
 
 The service helps drones to locate the nearest databank via a JSON API inorder to upload gathered data from space exploration.
 
+## Install packages
+
+* golangci-lint (https://golangci-lint.run/usage/install/)
+* docker (https://docs.docker.com/)
+
 ## Local Development
 
 * `make test` to run unit tests (or from inside your IDE)
@@ -26,15 +31,18 @@ The service helps drones to locate the nearest databank via a JSON API inorder t
 ## Example
 
 ```
-Health check 
+*Health check*
+
 Request
 curl --location --request POST 'http://localhost:5055/'
 
 Response
 {}
+```
 
-------------------------------------------------------------------
-Get location 
+```
+*Get location*
+
 Request
 curl --location --request POST 'http://localhost:5055/location' \
 --data-raw '{

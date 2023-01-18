@@ -3,7 +3,7 @@ package transport
 import (
 	"testing"
 
-	"github.com/betalo-sweden/navigationsvc/internal/navigationsvc/domain"
+	"github.com/akhilachatlapalle/navigationsvc/internal/navigationsvc/domain"
 
 	"github.com/stretchr/testify/assert"
 )

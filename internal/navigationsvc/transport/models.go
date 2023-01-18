@@ -3,7 +3,7 @@ package transport
 import (
 	"strconv"
 
-	"github.com/betalo-sweden/navigationsvc/internal/navigationsvc/domain"
+	"github.com/akhilachatlapalle/navigationsvc/internal/navigationsvc/domain"
 )
 
 type getLocationRequest struct {

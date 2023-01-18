@@ -3,7 +3,7 @@ package domain
 import (
 	"context"
 
-	"github.com/betalo-sweden/navigationsvc/pkg/math"
+	"github.com/akhilachatlapalle/navigationsvc/pkg/math"
 
 	"go.uber.org/zap"
 )

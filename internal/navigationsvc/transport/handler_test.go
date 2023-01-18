@@ -9,15 +9,15 @@ import (
 	"net/http/httptest"
 	"testing"
 
-	"github.com/betalo-sweden/navigationsvc/internal/navigationsvc/domain"
-	"github.com/betalo-sweden/navigationsvc/pkg/rest"
+	"github.com/akhilachatlapalle/navigationsvc/internal/navigationsvc/domain"
+	"github.com/akhilachatlapalle/navigationsvc/pkg/rest"
 
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"
 	"go.uber.org/zap"
 )
 
-func TestGetLocation(t *testing.T) {
+func TestHandler_GetLocation(t *testing.T) {
 	testCases := []struct {
 		name                 string
 		given                getLocationRequest

@@ -6,8 +6,8 @@ import (
 
 	"go.uber.org/zap"
 
-	"github.com/betalo-sweden/navigationsvc/internal/navigationsvc/domain"
-	"github.com/betalo-sweden/navigationsvc/pkg/rest"
+	"github.com/akhilachatlapalle/navigationsvc/internal/navigationsvc/domain"
+	"github.com/akhilachatlapalle/navigationsvc/pkg/rest"
 )
 
 type Handler struct {

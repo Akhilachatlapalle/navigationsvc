@@ -13,8 +13,8 @@ import (
 	"go.uber.org/zap"
 
 	// local
-	"github.com/betalo-sweden/navigationsvc/internal/config"
-	"github.com/betalo-sweden/navigationsvc/internal/service"
+	"github.com/akhilachatlapalle/navigationsvc/internal/config"
+	"github.com/akhilachatlapalle/navigationsvc/internal/service"
 )
 
 func main() {
