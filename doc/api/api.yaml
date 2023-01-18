@@ -1,0 +1,94 @@
+openapi: "3.0.0"
+
+info:
+  title: Navigation Service API
+  version: 1.0.0
+
+servers:
+  - url: http://localhost
+
+components:
+  schemas:
+    GetLocationResponse:
+      type: object
+      required:
+        - loc
+      properties:
+        loc:
+          type: number
+          example: 125.89
+          description: Returns the location of nearest databank
+
+    GetLocationRequest:
+      type: object
+      required:
+        - x
+        - y
+        - z
+        - vel
+      properties:
+        x:
+          type: string
+          example: "1.3"
+          description: X coordinate
+        y:
+          type: string
+          example: "1.9"
+          description: Y coordinate
+        z:
+          type: string
+          example: "1.7"
+          description: Z coordinate
+        vel:
+          type: string
+          example: "1.5"
+          description: Velocity
+
+paths:
+  /:
+    get:
+      summary: Health check
+      tags:
+        - navigation
+      responses:
+        200:
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: object
+
+  /location:
+    post:
+      summary: Returns the nearest databank location
+      tags:
+        - navigation
+      requestBody:
+        description: Request Body
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/GetLocationRequest'
+      responses:
+        200:
+          description: validate signing response
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/GetLocationResponse'
+        400:
+          description: Bad request error response
+          content:
+            application/json:
+              schema:
+                properties:
+                  status_code:
+                    example: 400
+                  message:
+                    type: string
+                    enum:
+                      - invalid_coordinate_x
+                      - invalid_coordinate_y
+                      - invalid_coordinate_z
+                      - invalid_velocity
